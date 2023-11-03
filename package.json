@@ -1,6 +1,7 @@
 {
   "name": "node_market_server",
   "version": "1.0.0",
+  "type": "commonjs",
   "description": "<br />",
   "main": "app.js",
   "scripts": {
@@ -11,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
+    "mongodb": "^6.2.0",
     "mongoose": "^8.0.0",
     "nodemon": "^3.0.1"
   }
