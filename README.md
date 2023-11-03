@@ -17,15 +17,18 @@
 
 ## 🗄 폴더 구조
 
-.
-├── app.js
-├── routes
-│   └── products.router.js
-├── schemas
-│   ├── index.js
-│   └── products.schema.js
-├── package.json
-└── npm.lock
+📦node_market_server
+┣ 📂routes
+┃ ┗ 📂products
+┃ ┃ ┗ 📜router.js
+┣ 📂schemas
+┃ ┣ 📂products
+┃ ┃ ┗ 📜schema.js
+┃ ┗ 📜index.js
+┣ 📜.gitignore
+┣ 📜app.js
+┣ 📜package.json
+┗ 📜README.md
 
 <br />
 
@@ -39,6 +42,8 @@
 <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
 <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
 <img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white">
+
+<br />
 
 ## 🙋‍♀️ To Do List
 
