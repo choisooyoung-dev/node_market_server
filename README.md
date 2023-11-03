@@ -16,7 +16,7 @@
 <br />
 
 ## 🗄 폴더 구조
-
+```bash
 📦node_market_server
 ┣ 📂routes
 ┃ ┗ 📂products
@@ -29,7 +29,7 @@
 ┣ 📜app.js
 ┣ 📜package.json
 ┗ 📜README.md
-
+```
 <br />
 
 ## ⛏ 사용 기술
