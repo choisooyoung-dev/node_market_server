@@ -13,14 +13,32 @@
 - AWS EC2에 Express.js 를 이용한 웹 서비스를 배포
 - API 리스트를 작성, 백엔드 서버를 설계
 
+<br />
+
+## 🗄 폴더 구조
+
+.
+├── app.js
+├── routes
+│   └── products.router.js
+├── schemas
+│   ├── index.js
+│   └── products.schema.js
+├── package.json
+└── npm.lock
+
+<br />
+
 ## ⛏ 사용 기술
 
 <img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white">
-<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
-<img src="https://img.shields.io/badge/express-000000?style=for-the-badge&logo=express&logoColor=white">
+
 <img src="https://img.shields.io/badge/mongoDB-47A248?style=for-the-badge&logo=MongoDB&logoColor=white">
+
+<img src="https://img.shields.io/badge/express-000000?style=for-the-badge&logo=express&logoColor=white">
 <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
 <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
+<img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white">
 
 ## 🙋‍♀️ To Do List
 
