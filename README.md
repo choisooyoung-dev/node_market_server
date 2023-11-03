@@ -1,5 +1,7 @@
 ## 🛒 node_market_server
 
+> Goal: "Node.js와 express를 활용한 나만의 내배캠 장터 백엔드 서버 만들기"
+
 <br />
 
 ![title](https://online.spartacodingclub.kr/v2/assets/icons/logo-active.png)  
@@ -16,6 +18,7 @@
 <br />
 
 ## 🗄 폴더 구조
+
 ```bash
 📦node_market_server
 ┣ 📂routes
@@ -30,6 +33,7 @@
 ┣ 📜package.json
 ┗ 📜README.md
 ```
+
 <br />
 
 ## ⛏ 사용 기술
