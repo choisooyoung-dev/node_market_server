@@ -22,13 +22,12 @@
 ```bash
 📦node_market_server
 ┣ 📂routes
-┃ ┗ 📂products
-┃ ┃ ┗ 📜router.js
+┃ ┗ 📜router.js
 ┣ 📂schemas
-┃ ┣ 📂products
-┃ ┃ ┗ 📜schema.js
+┣ ┗ 📜schema.js
 ┃ ┗ 📜index.js
 ┣ 📜.gitignore
+┣ 📜.prettierrc
 ┣ 📜app.js
 ┣ 📜package.json
 ┗ 📜README.md
@@ -51,25 +50,32 @@
 
 ## 🙋‍♀️ To Do List
 
-### 1. 데이터베이스 연결
+### 1. Directory setting
+
+- [x] .env
+- [x] .prettierrc
+- [x] .gitignore
+- [x] express
+- [x] nodemon
+
+### 2. 데이터베이스 연결
 
 - [x] mongodb, mongoose 설치
 - [x] Atlas 설치, 연결
-- [ ] 스키마 모델 설정, 확인
-- [ ] 데이터 CRUD 확인
+- [x] 스키마 모델 설정, 확인
 
-### 2. API 구현하기
+### 3. API 구현하기
 
-- [ ] 상품 작성
-  - [ ] 상품명, 작성 내용, 작성자명, 비밀번호를 request에서 전달받기
+- [ ] 상품 작성 POST
+  - [x] 상품명, 작성 내용, 작성자명, 비밀번호를 request에서 전달받기
   - [ ] 상품은 두 가지 상태, 판매 중(FOR_SALE)및 판매 완료(SOLD_OUT)
   - [ ] 상품 등록 시 기본 상태는 판매 중 (FOR_SALE)
 
 <br />
 
-- [ ] 상품 목록 조회
-  - [ ] 상품명, 작성자명, 상품 상태, 작성 날짜 조회
-  - [ ] 상품 목록은 작성 날짜를 기준으로 내림차순(최신순) 정렬
+- [x] 상품 목록 조회 GET
+  - [x] 상품명, 작성자명, 상품 상태, 작성 날짜 조회
+  - [x] 상품 목록은 작성 날짜를 기준으로 내림차순(최신순) 정렬
 
 <br />
 
@@ -92,6 +98,6 @@
 
 <br />
 
-### 3. AWS 배포
+### 4. AWS 배포
 
 - [ ] AWS EC2 배포
