@@ -1,0 +1,27 @@
+###
+
+# Main
+Get http://localhost:3000/api/products
+
+###
+# Detail
+
+Get http://localhost:3000/api/products
+
+###
+# Add
+POST http://localhost:3000/api/product
+content-type: application/json 
+
+{
+    "title": "기dd",
+    "content": "기dd",
+    "author": "기쓰dd",
+    "pwd": "12335",
+    "status": "FOR_SALE"
+}
+
+# Update
+
+
+# Delete
