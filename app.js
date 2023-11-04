@@ -8,7 +8,7 @@ connect();
 
 app.use(express.json());
 
-const productsRouter = require("./routes/products");
+const productsRouter = require("./routes/products.router");
 
 app.use("/api", productsRouter);
 

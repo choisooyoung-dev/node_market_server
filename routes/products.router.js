@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const products = require("../schemas/products");
+const products = require("../schemas/products.schema");
 
 // 상품 전체 조회
 router.get("/products", async (req, res) => {
