@@ -7,7 +7,7 @@ const connect = () => {
     .connect(
       `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PW}@marketcluster.evtlomv.mongodb.net/?retryWrites=true&w=majority`,
       {
-        dbName: "spa_market", // spa_market 데이터베이스명을 사용합니다.
+        dbName: `${process.env.DB_NAME}`, // spa_market 데이터베이스명을 사용합니다.
       }
     )
     .then(() =>
