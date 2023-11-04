@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
+const dotenv = require("dotenv").config();
 
 const connect = () => {
   // mongoose.connect는 MongoDB 서버에 연결하는 메서드입니다.
   mongoose
     .connect(
-      // 빨간색으로 표시된 부분은 대여한 ID, Password, 주소에 맞게끔 수정해주세요!
-      "mongodb+srv://sooyoung:qpqp170310@marketcluster.evtlomv.mongodb.net/?retryWrites=true&w=majority",
+      `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PW}@marketcluster.evtlomv.mongodb.net/?retryWrites=true&w=majority`,
       {
         dbName: "spa_market", // spa_market 데이터베이스명을 사용합니다.
       }
