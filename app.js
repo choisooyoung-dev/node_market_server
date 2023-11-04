@@ -3,14 +3,14 @@ const app = express();
 const port = 3000;
 
 // 스키마 연결
-const connect = require("./schemas/index");
+const connect = require("./schemas");
 connect();
-
-const productsRouter = require("./routes/products/router");
 
 app.use(express.json());
 
-app.use("/api", [productsRouter]);
+const productsRouter = require("./routes/products");
+
+app.use("/api", productsRouter);
 
 app.get("/", (req, res) => {
   res.send("Hello / ");
