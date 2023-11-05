@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const products = require("../schemas/products.schema");
+const { stringify } = require("nodemon/lib/utils");
 
 // 상품 전체 조회
 router.get("/products", async (req, res) => {
@@ -18,19 +19,21 @@ router.get("/products", async (req, res) => {
 router.get("/products/:productId", async (req, res) => {
   try {
     const { productId } = req.params;
-    const detail = await products.findOne({ productId });
-    // const detail = allProducts.filter(
-    //   (product) => String(product._id) === productId
-    // );
-    // console.log(detail);
-    return res.send(detail);
+    console.log(productId);
+    const allProducts = await products.find({});
+    // const detail = await products.findOne({ productId });
+    const detail = allProducts.filter(
+      (product) => String(product._id) === productId
+    );
+    console.log(detail);
+    return res.status(200).send(detail);
   } catch (error) {
     return res.json({ fail: "fail" });
   }
 });
 
 // 상품 등록
-router.post("/product", (req, res) => {
+router.post("/products", (req, res) => {
   try {
     products.create({
       title: req.body.title,
@@ -48,26 +51,28 @@ router.post("/product", (req, res) => {
 // 상품 수정
 router.put("/products/:productId", async (req, res) => {
   try {
+    const { title, content, author, pwd, status } = req.body;
     const { productId } = req.params;
     const allProducts = await products.find({});
-    const matchIdProduct = allProducts.filter(
+    // const detail = await products.findOne({ productId });
+    const detail = allProducts.filter(
       (product) => String(product._id) === productId
     );
+    console.log(detail[0]);
 
-    matchIdProduct.updateOne(
-      { productId: products._id },
-      {
-        $set: {
-          title: req.body.title,
-          content: req.body.content,
-          author: req.body.author,
-          pwd: req.body.pwd,
-          status: req.body.status,
-        },
-      }
-    );
-    return res.json({ success: "success" });
+    const modifiedProduct = {
+      title,
+      content,
+      author,
+      pwd,
+      status,
+    };
+
+    await detail[0].updateOne(modifiedProduct);
+
+    return res.json({ message: "modify!" });
   } catch (error) {
+    console.log(req.params);
     return res.json({ fail: "fail" });
   }
 });
