@@ -6,11 +6,11 @@ Get http://localhost:3000/api/products
 ###
 # Detail
 
-Get http://localhost:3000/api/products
+Get http://localhost:3000/api/products/6547c802d5fb635daad38926
 
 ###
 # Add
-POST http://localhost:3000/api/product
+POST http://localhost:3000/api/products
 content-type: application/json 
 
 {
@@ -21,7 +21,28 @@ content-type: application/json
     "status": "FOR_SALE"
 }
 
-# Update
+###
 
+# Update
+PUT http://localhost:3000/api/products/6547c802d5fb635daad38926
+content-type: application/json 
+
+{
+    "title": "사과",
+    "content": "사과",
+    "author": "코딩애플",
+    "pwd": "12335",
+    "status": "FOR_SALE"
+}
+
+###
 
 # Delete
+DELETE  http://localhost:3000/api/products/6547c802d5fb635daad38926
+content-type: application/json 
+
+{
+   
+    "pwd": "12335",
+   
+}
