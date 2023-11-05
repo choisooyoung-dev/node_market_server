@@ -92,4 +92,21 @@ router.put("/products/:productId", async (req, res) => {
   }
 });
 
+// 상품 삭제
+router.delete("/products/:productId", async (req, res) => {
+  const { productId } = req.params;
+  try {
+    const allProducts = await products.find({});
+    console.log(allProducts);
+    const detail = allProducts.filter(
+      (product) => String(product._id) === productId
+    );
+    // console.log(detail[0]);
+    await detail[0].deleteOne({ productId });
+    return res.json({ message: "상품이 삭제되었습니다." });
+  } catch (error) {
+    return res.json({ fail: "fail" });
+  }
+});
+
 module.exports = router;
