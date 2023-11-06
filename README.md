@@ -7,7 +7,7 @@
 ![title](https://online.spartacodingclub.kr/v2/assets/icons/logo-active.png)  
 <br />
 
-> ![👉배포 링크](http://s00.shop/api/products)
+> [👉배포 링크](http://s00.shop/api/products)
 
 ## 🎈 구현 목표
 
