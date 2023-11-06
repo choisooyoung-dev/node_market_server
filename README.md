@@ -7,6 +7,8 @@
 ![title](https://online.spartacodingclub.kr/v2/assets/icons/logo-active.png)  
 <br />
 
+> ![👉배포 링크](http://s00.shop/api/products)
+
 ## 🎈 구현 목표
 
 - Node.js를 이용해서 웹 프레임워크를 구현.
@@ -100,4 +102,4 @@
 
 ### 4. AWS 배포
 
-- [ ] AWS EC2 배포
+- [x] AWS EC2 배포
